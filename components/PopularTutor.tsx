@@ -10,6 +10,13 @@
         rating: 5,
         img: "/Ram.png",
     },
+        {
+        name: "Volkan",
+        title: "UI/UX & Frontend",
+        classes: "40 Classes",
+        rating: 5,
+        img: "/Volkan.jpg",
+    },
     {
         name: "Robert James",
         title: "UI/UX Designer",
