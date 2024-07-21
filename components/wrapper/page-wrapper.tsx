@@ -1,6 +1,7 @@
 import React from "react";
-import { NavbarDemo } from "./navbar";
+
 import Footer from "../Footer";
+import { NavbarDemo } from "../navbar";
 
 export default function PageWrapper({
   children,

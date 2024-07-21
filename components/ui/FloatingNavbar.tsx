@@ -13,8 +13,9 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import MagicButton3 from "./MagicButton2";
 import { GoSignIn } from "react-icons/go";
+
+import MagicButton3 from "../MagicButton2";
 
 export const FloatingNav = ({
   navItems,

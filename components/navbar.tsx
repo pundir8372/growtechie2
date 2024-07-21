@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import MagicButton3 from "./MagicButton2";
 import { GoSignIn } from "react-icons/go";
+import Image from 'next/image';
 
 export function NavbarDemo() {
   return (
@@ -43,14 +44,14 @@ function Navbar({ className }: { className?: string }) {
             <div className="  grid grid-cols-2 gap-10 p-4 text-xs">
               <ProductItem
                 title="E-building"
-                href="https://algochurn.com"
+                href="/e-building"
                 src="https://assets.aceternity.com/demos/algochurn.webp"
                 description="Prepare for tech interviews like never before."
               />
               <ProductItem
                 title="Teachers"
-                href="https://tailwindmasterkit.com"
-                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                href="/teachers"
+                src="/Teachers.jpg"
                 description="Production ready Tailwind css components for your next project"
               />
             </div>
