@@ -1,4 +1,4 @@
-    // components/PopularTutors.tsx
+ // components/PopularTutors.tsx
     import React from 'react';
     import "./style.css"
 
@@ -47,49 +47,71 @@
     },
     ];
 
-    const PopularTutors = () => {
+    interface PopularTutorsProps {
+    searchTerm: string;
+}
+
+const PopularTutors: React.FC<PopularTutorsProps> = ({ searchTerm }) => {
+    const filteredTutors = tutors.filter(tutor =>
+        tutor.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
-    
-        <div className="p-6 rounded-lg mb-10 mt-20">
-        <div className="flex justify-between items-center mb-4">
-            <h2 style={{fontFamily: 'Inria Sans',
-                fontSize: '40px',
-                fontWeight: 700,
-                lineHeight: '47.96px',
-                textAlign: 'left',
-                color: "#CBACF9",
-                }} className="text-3xl  text-purple-300">Popular Tutors</h2>
-            <button className="custom-button">Find A Tutor</button>
-        </div>
-        <h3 style={{
-            fontFamily: 'Istok Web',
-            fontSize: '24px',
-            fontWeight: 700,
-            lineHeight: '34.55px',
-            textAlign: 'left',
-            }}className="text-xl text-white mb-6 mt-10">Meet Our Popular Tutors</h3>
-        <div className="flex flex-wrap justify-between">
-            {tutors.map((tutor, index) => (
-            <div key={index} className="flex flex-col items-center w-1/4 p-4">
-                <img
-                src={tutor.img}
-                alt={tutor.name}
-                className="w-24 h-24 rounded-full mb-4 border-2 border-gray-300"
-                />
-                <h4 className="text-white text-lg">{tutor.name}</h4>
-                <p className="text-gray-400">{tutor.title}</p>
-                <p className="text-gray-400">{tutor.classes}</p>
-                <div className="flex items-center mt-2">
-                <span className="text-yellow-400 mr-1">★</span>
-                <span className="text-white">{tutor.rating}</span>
-                </div>
+    <div className="p-6 rounded-lg mb-10 mt-20">
+            <div className="flex justify-between items-center mb-4">
+                <h2
+                    style={{
+                        fontFamily: 'Inria Sans',
+                        fontSize: '40px',
+                        fontWeight: 700,
+                        lineHeight: '47.96px',
+                        textAlign: 'left',
+                        color: "#CBACF9",
+                    }}
+                    className="text-3xl text-purple-300"
+                >
+                    Popular Tutors
+                </h2>
+                <button className="custom-button">Find A Tutor</button>
             </div>
-            ))}
-        </div>
+            <h3
+                style={{
+                    fontFamily: 'Istok Web',
+                    fontSize: '24px',
+                    fontWeight: 700,
+                    lineHeight: '34.55px',
+                    textAlign: 'left',
+                }}
+                className="text-xl text-white mb-6 mt-10"
+            >
+                Meet Our Popular Tutors
+            </h3>
+            <div className="flex flex-wrap justify-between">
+                {filteredTutors.length > 0 ? (
+                    filteredTutors.map((tutor, index) => (
+                        <div key={index} className="flex flex-col items-center w-1/4 p-4">
+                            <img
+                                src={tutor.img}
+                                alt={tutor.name}
+                                className="w-24 h-24 rounded-full mb-4 border-2 border-gray-300"
+                            />
+                            <h4 className="text-white text-lg">{tutor.name}</h4>
+                            <p className="text-gray-400">{tutor.title}</p>
+                            <p className="text-gray-400">{tutor.classes}</p>
+                            <div className="flex items-center mt-2">
+                                <span className="text-yellow-400 mr-1">★</span>
+                                <span className="text-white">{tutor.rating}</span>
+                            </div>
+                        </div>
+                    ))
+                ) : (
+                    <p className="text-white">No tutors found</p>
+                )}
+            </div>
         </div>
         
-    );
+        
+    )
     };
 
     export default PopularTutors;
