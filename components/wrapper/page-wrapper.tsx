@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 
+=======
+import { NavbarDemo } from "@/components/navbar";
+>>>>>>> upstream/main
 import Footer from "../Footer";
 import { NavbarDemo } from "../navbar";
 

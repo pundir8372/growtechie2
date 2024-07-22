@@ -143,13 +143,7 @@ export const testimonials =  [
     title: "SQL Developer: CGI",
     img:"Puja.jpg"
   },
-  {
-    quote:
-      "Collaborating with Growtechie was an absolute pleasure. Their professionalism, promptness, and dedication to delivering exceptional sessions were evident throughout my course journey. They have really enthusiastics tutors which truly stands out. If you're seeking to elevate your tech career and elevate your brand, Growtechie is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
+    {
     quote:
       "Collaborating with Growtechie was an absolute pleasure. Their professionalism, promptness, and dedication to delivering exceptional sessions were evident throughout my course journey. They have really enthusiastics tutors which truly stands out. If you're seeking to elevate your tech career and elevate your brand, Growtechie is the ideal partner.",
     name: "Rohit Kullkarni",
@@ -227,13 +221,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    href: "https://github.com/growtechie", // Replace with your GitHub URL
   },
   {
     id: 2,
     img: "/twit.svg",
+    href: "https://twitter.com/growtechie", // Replace with your Twitter URL
   },
   {
     id: 3,
     img: "/link.svg",
+    href: "https://www.linkedin.com/company/growtechie", // Replace with your LinkedIn URL
   },
 ];

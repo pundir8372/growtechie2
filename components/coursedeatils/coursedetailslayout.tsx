@@ -1,4 +1,4 @@
-// app/courses/page.tsx
+// components/coursedetails/coursedetailslayout.tsx
 
 "use client";
 
@@ -6,9 +6,8 @@ import { useRouter } from "next/router";
 import { courses } from "@/data";
 import { useEffect, useState } from "react";
 import { Course } from "@/types";
-import PageWrapper from "@/components/wrapper/page-wrapper";
-import Courses from "@/components/Courses";
-import Coursedetail from "@/components/coursedeatils/coursedetailslayout";
+import OnlineLearningSteps from "@/components/coursedeatils/onlinelearningsteps";
+import DiscountForm from "@/components/coursedeatils/discountform";
 
 const CourseDetail = () => {
   const router = useRouter();
@@ -18,8 +17,8 @@ const CourseDetail = () => {
 
   useEffect(() => {
     if (courseId) {
-      const courseData = courses.find((course) => course.id === Number(courseId)) || null;
-      setCourse(courseData);
+      const courseData = courses.find((course) => course.id === Number(courseId));
+setCourse(courseData || null);
     }
   }, [courseId]);
 
@@ -59,6 +58,8 @@ const CourseDetail = () => {
           </button>
         </div>
       </div>
+      <OnlineLearningSteps />
+      <DiscountForm />
     </div>
   );
 };

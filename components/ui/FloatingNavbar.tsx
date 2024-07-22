@@ -1,5 +1,3 @@
-// Use this directive in the parent component of FloatingNavbar.tsx
-
 "use client";
 
 // Your parent component code here
@@ -13,6 +11,10 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
+=======
+import MagicButton3 from "@/components/MagicButton2";
+>>>>>>> upstream/main
 import { GoSignIn } from "react-icons/go";
 
 import MagicButton3 from "../MagicButton2";
@@ -94,11 +96,14 @@ export const FloatingNav = ({
 
             {showAuthButtons && ( // Conditionally render auth buttons
               <div className="flex space-x-4 justify-center items-center">
-                <div className=" text-xs">Get Started</div>
+                <Link href="#courses" className="text-lg font-medium text-white">
+                  Get Started
+                </Link>
                 <MagicButton3
                   title="Sign in"
-                  icon={<GoSignIn />}
+                  icon={<GoSignIn size={24} />} // Adjust the size of the icon
                   position="right"
+                  // className="text-lg font-medium"
                 />
               </div>
             )}
