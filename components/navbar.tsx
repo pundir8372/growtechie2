@@ -26,59 +26,45 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <div className="flex items-center space-x-1">
+          <MenuItem setActive={setActive} active={active} item="Home">
+            <Link href="/">Home</Link>
+          </MenuItem>
+        </div>
+        <div className="flex items-center space-x-1">
           <MenuItem setActive={setActive} active={active} item="Community">
             <div className="flex flex-col space-y-4 text-xs">
-              <HoveredLink href="/web-dev">Discord</HoveredLink>
-              {/* <HoveredLink href="/interface-design">
-                Interface Design
-              </HoveredLink> */}
-              {/* <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink> */}
+              <HoveredLink href="https://discord.gg/4xRJfKAv">Discord</HoveredLink>
             </div>
           </MenuItem>
           <IoIosArrowDown size={12} />
         </div>
         <div className="flex items-center space-x-1">
           <MenuItem setActive={setActive} active={active} item="Product">
-            <div className="  grid grid-cols-2 gap-10 p-4 text-xs">
+            <div className="grid grid-cols-2 gap-10 p-4 text-xs">
               <ProductItem
                 title="E-building"
-                href="https://algochurn.com"
+                href="/e-building"
                 src="https://assets.aceternity.com/demos/algochurn.webp"
-                description="Prepare for tech interviews like never before."
+                description="Bring your ideas into reality with us."
               />
               <ProductItem
                 title="Teachers"
-                href="https://tailwindmasterkit.com"
+                href="/teachers"
                 src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                description="Production ready Tailwind css components for your next project"
+                description="Find expert teachers for your learning needs."
               />
             </div>
           </MenuItem>
           <IoIosArrowDown size={12} />
         </div>
-        {/* <MenuItem setActive={setActive} active={active} item="Ekibimiz">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem> */}
-        {/* <MenuItem setActive={setActive} active={active} item="Courses">
-          <div className="flex flex-col space-y-4 text-xs">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem> */}
         <Link href="#courses">Courses</Link>
       </Menu>
       <div className="flex space-x-4 w-full justify-end items-center">
-        <div className=" text-xs font-medium">Get Started</div>
+        <div className="text-xs font-medium">Get Started</div>
         <MagicButton3 title="Sign in" icon={<GoSignIn />} position="right" />
       </div>
     </div>
   );
 }
+
+export default Navbar;

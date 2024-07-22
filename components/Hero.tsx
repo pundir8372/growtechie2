@@ -1,5 +1,4 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -59,7 +58,7 @@ const Hero = () => {
           /> */}
           <div className="h-[40rem] flex flex-col justify-center items-center px-4">
             <p className="uppercase tracking-widest whitespace-nowrap text-s text-center text-neutral-400 my-4 max-w-80">
-              LEARN W1TH THE MAGIC OF THE W3B
+              LEARN WITH INDUSTRY EXPERTS
             </p>
             <div className="text-6xl mx-auto font-bold text-neutral-600 dark:text-neutral-400 text-center">
               Learn to code with expert teachers and boost your <br />
@@ -73,13 +72,15 @@ const Hero = () => {
           </p>
            */}
 
-          <a href="#about">
-            <MagicButton
-              title="About More"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="mt-5"> {/* Adjust this margin to move the button up or down */}
+            <a href="#about">
+              <MagicButton
+                title="About More"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

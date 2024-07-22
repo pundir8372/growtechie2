@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarDemo } from "./navbar";
+import { NavbarDemo } from "@/components/navbar";
 import Footer from "../Footer";
 
 export default function PageWrapper({
